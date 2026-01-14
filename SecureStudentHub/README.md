@@ -21,6 +21,20 @@ A secure web application developed for the **Application Security** course. This
 * [Threat Modeling (STRIDE)](docs/STRIDE_Threat_Model.md)
 * [Risk Assessment (DREAD)](docs/DREAD_Risk_Assessment.md)
 
+
+
+## 🕵️‍♂️ Security Scans & Compliance
+
+The codebase has been scanned using industry-standard tools to ensure security compliance.
+
+* **GitHub CodeQL:** Automated security analysis ran via GitHub Actions.
+    * *Result:* Passed (See screenshots in `scans/` folder).
+* **Snyk:** Dependency and vulnerability scanning.
+    * *Result:* Analysis of 3rd-party libraries (See screenshots in `scans/` folder).
+
+> **Note on Findings:** The scanner identified a dependency warning in the default `jquery.validate.js` library. This risk is mitigated via our strict **Server-Side Validation** in the `AuthController`.
+
+
 ## 🚀 Setup Instructions
 1.  Clone the repository.
 2.  Open in Visual Studio.

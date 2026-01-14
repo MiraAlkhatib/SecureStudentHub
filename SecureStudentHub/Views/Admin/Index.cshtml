@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<div class="container mt-5">
+    <div class="alert alert-danger">
+        <h1>⚠️ TOP SECRET: ADMINS ONLY</h1>
+        <p>If you can read this, the RBAC system validated that you are an Administrator.</p>
+    </div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Safety</a>
+</div>

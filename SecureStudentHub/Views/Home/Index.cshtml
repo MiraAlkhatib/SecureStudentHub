@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Secure Dashboard";
+}
+
+<div class="card mt-5 shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h3>🔐 Secure Dashboard</h3>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Welcome, @ViewBag.Username!</h4>
+        <p class="card-text text-success">
+            <i class="bi bi-shield-check"></i> Authentication Successful
+        </p>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">Your Role:</dt>
+            <dd class="col-sm-9"><span class="badge bg-info text-dark">@ViewBag.Role</span></dd>
+
+            <dt class="col-sm-3">Session Type:</dt>
+            <dd class="col-sm-9">HttpOnly Secure Cookie</dd>
+
+            <dt class="col-sm-3">Security Status:</dt>
+            <dd class="col-sm-9">Encrypted & Protected</dd>
+        </dl>
+        <a asp-controller="Auth" asp-action="Logout" class="btn btn-danger">Logout</a>
+    </div>
+</div>

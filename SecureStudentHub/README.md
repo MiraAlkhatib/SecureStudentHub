@@ -34,6 +34,18 @@ The codebase has been scanned using industry-standard tools to ensure security c
 
 > **Note on Findings:** The scanner identified a dependency warning in the default `jquery.validate.js` library. This risk is mitigated via our strict **Server-Side Validation** in the `AuthController`.
 
+---
+### ⚠️ Note on Configuration & Secrets
+For the purpose of this academic submission, the **Database Connection String** and **Encryption Keys** have been included directly in the source code (`Program.cs` / `EncryptionService.cs`).
+
+This was done to ensure the application runs immediately on the instructor's machine using **LocalDB** without requiring additional environment configuration.
+
+**Production Security Disclosure:**
+In a real-world production environment, we would **NEVER** commit secrets to source control. Instead, we would:
+1.  Store secrets in **Environment Variables** or **Azure Key Vault**.
+2.  Use a `.env` file listed in `.gitignore`.
+3.  Inject secrets at runtime to prevent Information Disclosure.
+---
 
 ## 🚀 Setup Instructions
 1.  Clone the repository.
